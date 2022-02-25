@@ -7,7 +7,7 @@ function Login() {
 
     
     const getToken = async () => {
-        fetch(`'https://django-api-projects00.herokuapp.com/api/token/`,{
+        fetch(`https://django-api-projects00.herokuapp.com/api/token/`,{
             method:'POST',
             'headers': {
                'Content-Type': 'application/json'
