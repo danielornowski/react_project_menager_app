@@ -8,7 +8,7 @@ import FetchToken from "../../FetchToken";
 const  SingleProject = (props) => {
     
     const deleteProject = async () => {
-        FetchToken(`/project/${props.id}/delete`,{
+        FetchToken(`project/${props.id}/delete`,{
             method:'DELETE',
             'headers': {
                 'Content-Type': 'application/json'

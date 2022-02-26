@@ -29,7 +29,7 @@ import FetchToken from '../../FetchToken';
 
 
     let updateProject = async (props) => {
-        FetchToken(`/project/${id}/update/`, {
+        FetchToken(`project/${id}/update/`, {
             method: 'PUT',
             headers: {
                     'Content-Type': 'application/json'

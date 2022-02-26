@@ -11,7 +11,7 @@ function AddForm (){
     const created = ''
     
     let createProject = async () => {
-        FetchToken(`/project/create/`, {
+        FetchToken(`project/create/`, {
             method: 'POST',
             headers: {
                     'Content-Type': 'application/json'

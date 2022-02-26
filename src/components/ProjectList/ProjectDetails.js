@@ -11,7 +11,7 @@ const ProjectDetails = () => {
 
     let getProject = async () => {
         
-        let response = await FetchToken(`/project/${id}/`)
+        let response = await FetchToken(`project/${id}/`)
         let data = await response.json()
         setProject(data)
     }
@@ -24,7 +24,7 @@ const ProjectDetails = () => {
 
     let getComment = async () => {
         
-        let response = await FetchToken(`/project/${id}/comments`)
+        let response = await FetchToken(`project/${id}/comments`)
         let data = await response.json()
         setComments(data)
     }

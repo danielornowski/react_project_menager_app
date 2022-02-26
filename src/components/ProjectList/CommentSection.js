@@ -8,7 +8,7 @@ function CommentSection () {
     const [comment, setComment] = useState()
 
     let createComment = async () => {
-        FetchToken(`/project/${ id }/comment`, {
+        FetchToken(`project/${ id }/comment`, {
             method: 'POST',
             headers: {
                     'Content-Type': 'application/json'
