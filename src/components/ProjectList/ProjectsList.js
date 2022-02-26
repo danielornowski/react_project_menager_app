@@ -14,7 +14,7 @@ function ProjectList() {
 
 
     let getProject = async () => {
-        let response = await FetchToken('/projects/')
+        let response = await FetchToken('/projects')
         let data = await response.json()
         setProject(data)
     }
