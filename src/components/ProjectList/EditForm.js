@@ -14,7 +14,7 @@ import FetchToken from '../../FetchToken';
 
     let getProject = async () => {
         
-        let response = await FetchToken(`/project/${id}/`)
+        let response = await FetchToken(`project/${id}/`)
         let data = await response.json()
         setName(data.name)
         setStatus(data.status)
