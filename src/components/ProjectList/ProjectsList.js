@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import FetchToken from "../../FetchToken";
 import SingleProject from "./SingleProject";
 
 
 function ProjectList() {
 
+    const {refresh} = useParams()
     let [projects, setProject] = useState([])
 
     useEffect(()=>{
         getProject()
-    }, [])
+    }, [refresh])
 
 
     let getProject = async () => {
         let response = await FetchToken('projects/')
         let data = await response.json()
         setProject(data)
+    }
+
+    const deleteProject = async (id) => {
+        FetchToken(`project/${id}/delete/`,{
+            method:'DELETE',
+            'headers': {
+                'Content-Type': 'application/json'
+            }
+        })
+
+        getProject()
     }
 
     return(
@@ -35,7 +47,7 @@ function ProjectList() {
             <tbody className="bg-white">
                 {projects?.length > 0 && projects.map((project) => (
                      <tr key={project.id}>
-                         <SingleProject {...project}/> 
+                         <SingleProject {...project} deleteProject={() => deleteProject(project.id)}/> 
                     </tr>
                  )) }
             </tbody>

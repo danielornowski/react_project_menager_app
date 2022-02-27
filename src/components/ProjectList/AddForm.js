@@ -45,7 +45,7 @@ function AddForm (){
                 </select>
             </div>
             <div>
-                <Link to='/ProjectList'>
+                <Link to='/ProjectList?refresh=1'>
                     <button className="px-2 py-2 m-1 bg-green-600 rounded text-white" onClick={handleSubmit}>Zatwierdź</button>
                 </Link>
                 <Link to='/ProjectList'>

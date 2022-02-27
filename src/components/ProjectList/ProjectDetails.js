@@ -59,7 +59,7 @@ const ProjectDetails = () => {
                 <div key={comment.id} className="bg-white rounded-lg p-3  flex flex-col justify-center items-center md:items-start shadow-lg mb-4 p-6 w-1/2">
                     <div className="flex mr-2 min-w-full h-10">
                         <div className='flex justify-between w-full'>
-                            <h3 className="text-blue-600 font-semibold text-lg text-center md:text-left mr-2">Author</h3>
+                            <h3 className="text-blue-600 font-semibold text-lg text-center md:text-left mr-2">{comment.author}</h3>
                             <label className='text-blue-600 font-semibold text-lg text-center md:text-left mr-2'>{comment.add_date}</label>
                         </div>
                     </div>
